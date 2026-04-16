@@ -1,0 +1,65 @@
+@use "sass:color" as *;
+@use "sass:map";
+
+$theme-colors: (
+  "red": #f44336,
+  "blue": #3f51b5,
+  "green": #4caf50,
+);
+
+// Mixin para generar la paleta dinámicamente
+@mixin generate-palette($name, $base-color) {
+  .#{$name}-theme {
+    // Cálculo del color complementario para el texto
+    $text-complement: complement($base-color);
+
+    .base-color {
+      background-color: $base-color;
+      width: 140px;
+      color: white;
+    }
+
+    @for $i from 1 through 4 {
+      // Relación Fondo: 15% | Relación Texto: 10% (Ajustado para legibilidad)
+      .lighten-#{$i} {
+        background-color: scale($base-color, $lightness: $i * 10%);
+        color: scale($text-complement, $lightness: $i * 10%);
+      }
+      .darken-#{$i} {
+        background-color: scale($base-color, $lightness: $i * -10%);
+        color: scale($text-complement, $lightness: $i * -10%);
+      }
+    }
+  }
+}
+
+// Se generan las tres filas automáticamente
+@each $name, $color in $theme-colors {
+  @include generate-palette($name, $color);
+}
+
+.container-1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 5px;
+  justify-content: center;
+}
+
+.box {
+  width: 100px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-family: sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  text-align: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// Extraemos el color base del mapa
+$base: map.get($theme-colors, "base");
