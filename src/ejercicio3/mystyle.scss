@@ -1,0 +1,61 @@
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+
+  --primary_color: #006a7b;
+  --primary_color_darker: #2f4858;
+}
+
+.navbar {
+  max-width: 925px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
+  }
+}
+
+.list-navbar {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: var(--primary_color);
+
+  li {
+    flex: 1;
+    display: flex;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 60px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--primary_color_darker);
+      }
+    }
+  }
+}
+
+/* Diseño Responsivo (Mobile) */
+@media screen and (max-width: 650px) {
+  .list-navbar {
+    flex-direction: column;
+
+    li {
+      width: 100%;
+
+      a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
