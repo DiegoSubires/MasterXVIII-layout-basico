@@ -1,0 +1,24 @@
+@use "./theme-a" as themeA;
+@use "./theme-b" as themeB;
+@use "./mixins" as m;
+
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.themes-wrapper {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  padding: 40px;
+}
+
+.theme-a-container {
+  @include m.apply-theme(themeA.$config);
+}
+
+.theme-b-container {
+  @include m.apply-theme(themeB.$config);
+}

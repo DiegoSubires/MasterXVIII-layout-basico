@@ -1,0 +1,21 @@
+$config: (
+  "colors": (
+    "base": #fe0000,
+    "important": #660000,
+    "warning": #ffbfcd,
+  ),
+  "fonts": (
+    "principal": (
+      "family": "'Arial', sans-serif",
+      "size": 1.5rem,
+      "weight": 500,
+    ),
+    "secondary": (
+      "family": "'Courier New', monospace",
+      "size": 1.5rem,
+      "weight": 600,
+    ),
+  ),
+  "border-radius": 2px,
+  "shadow-direction": -10px,
+);

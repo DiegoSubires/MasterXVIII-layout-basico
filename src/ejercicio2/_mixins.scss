@@ -1,0 +1,60 @@
+@use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+
+@mixin apply-theme($theme-map) {
+  // EXTRACCIÓN DE MAPAS DEL TEMA
+  $colors: map.get($theme-map, "colors");
+  $fonts: map.get($theme-map, "fonts");
+  $s-dir: map.get($theme-map, "shadow-direction");
+  $radius: map.get($theme-map, "border-radius");
+
+  // ESTILO BASE (Placeholder para herencia)
+  %base-box-style {
+    width: 160px;
+    height: 120px;
+    padding: 15px;
+    //margin: 1px;
+    border-radius: $radius;
+    border: 2px solid #999;
+    font-family: unquote("'Sour Gummy', sans-serif");
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: black;
+    box-sizing: border-box;
+  }
+
+  // Definimos la lista localmente justo antes del bucle
+  $font-types: ("principal", "secondary");
+
+  @each $type in $font-types {
+    $f-data: map.get($fonts, $type);
+
+    @if $f-data {
+      .font-#{$type} {
+        font-family: unquote(map.get($f-data, "family"));
+        font-size: map.get($f-data, "size");
+        font-weight: map.get($f-data, "weight");
+        margin-bottom: 10px;
+        color: #333;
+        display: block;
+      }
+    }
+  }
+
+  // Box de colores
+  @each $key, $value in $colors {
+    .box-#{$key} {
+      @extend %base-box-style;
+      background-color: $value;
+      margin-bottom: 0.5px;
+    }
+  }
+
+  // Box con sombra
+  .box-shadow {
+    @extend %base-box-style;
+    background-color: white;
+    // Sombra usa la dirección dinámica del tema
+    box-shadow: $s-dir 12px 15px rgba(0, 0, 0, 0.75);
+  }
+}

@@ -1,0 +1,21 @@
+$config: (
+  "colors": (
+    "base": #0000ff,
+    "important": #000066,
+    "warning": #00ffff,
+  ),
+  "fonts": (
+    "principal": (
+      "family": "'Times New Roman', Times, serif",
+      "size": 1.5rem,
+      "weight": 400,
+    ),
+    "secondary": (
+      "family": "Georgia, 'Times New Roman', Times, serif",
+      "size": 1.3rem,
+      "weight": 400,
+    ),
+  ),
+  "border-radius": 12px,
+  "shadow-direction": 10px,
+);
