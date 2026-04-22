@@ -3,35 +3,235 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 1 - Paleta Dinámica</title>
+    <title>Ejercicio 4 - Aquatic Plants Grid</title>
     <link rel="stylesheet" href="./style.scss" />
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <a href="/">← Volver al índice</a>
-      <h1>Ejercicio 4: Grid Card</h1>
+      <h1>Catálogo de Plantas Acuáticas</h1>
     </header>
 
-    <article class="card">
-      <div class="card-image">
-        <img src="./assets/lotus.jpg" alt="Sacred Lotus" />
-      </div>
-
-      <div class="card-content">
-        <h3 class="card-title">Title</h3>
-        <p class="card-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-
-        <div class="card-footer">
-          <p class="published-label">
-            Published:
-            <time datetime="2025-04-05" class="date">April 5, 2025</time>
-          </p>
-          <button class="btn-more">More Info</button>
+    <main class="grid-container">
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/lotus.jpg" alt="Sacred Lotus" />
         </div>
-      </div>
-    </article>
+        <div class="card-content">
+          <h3 class="card-title">Nelumbo nucifera</h3>
+          <p class="card-description">
+            El loto sagrado es una planta acuática famosa por la belleza de sus
+            flores rosadas o blancas.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-04-05" class="date">April 5, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/pistia.jpg" alt="Pistia stratiotes" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Pistia stratiotes</h3>
+          <p class="card-description">
+            Conocida como lechuga de agua, es una planta flotante perenne que
+            forma rosetas densas.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-10" class="date">May 10, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/salvinia.jpg" alt="Salvinia molesta" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Salvinia molesta</h3>
+          <p class="card-description">
+            Helecho acuático flotante de rápido crecimiento, nativo del sureste
+            de Brasil.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-12" class="date">May 12, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/lemna.jpg" alt="Lemna minor" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Lemna minor</h3>
+          <p class="card-description">
+            La lenteja de agua es una planta diminuta que cubre superficies de
+            agua dulce estancada.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-15" class="date">May 15, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/potamogeton.jpg" alt="Potamogeton" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Potamogeton polygonifolius</h3>
+          <p class="card-description">
+            Planta de hojas flotantes ovales, común en aguas ácidas y poco
+            profundas.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-18" class="date">May 18, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/limnobium.jpg" alt="Limnobium" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Limnobium laevigatum</h3>
+          <p class="card-description">
+            El trébol de agua amazónico destaca por sus hojas circulares y
+            raíces colgantes.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-20" class="date">May 20, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/trapa.jpg" alt="Trapa natans" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Trapa natans</h3>
+          <p class="card-description">
+            La castaña de agua tiene hojas en roseta flotante y produce un fruto
+            comestible singular.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-22" class="date">May 22, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/nymphaea.jpg" alt="Nymphaea tetragona" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Nymphaea tetragona</h3>
+          <p class="card-description">
+            Un nenúfar pigmeo de hermosas flores blancas, ideal para estanques
+            pequeños.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-25" class="date">May 25, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/oryza.jpg" alt="Oryza sativa" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Oryza sativa</h3>
+          <p class="card-description">
+            El arroz común, planta gramínea cultivada en campos inundados en
+            todo el mundo.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-05-28" class="date">May 28, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/zizania.jpg" alt="Zizania latifolia" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Zizania latifolia</h3>
+          <p class="card-description">
+            Arroz silvestre de Manchuria, planta acuática de gran altura
+            apreciada por su tallo.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-06-01" class="date">June 1, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="./assets/eleocharis.jpg" alt="Eleocharis dulcis" />
+        </div>
+        <div class="card-content">
+          <h3 class="card-title">Eleocharis dulcis</h3>
+          <p class="card-description">
+            Castaña de agua china, cultivada por sus tubérculos crujientes y
+            dulces en Asia.
+          </p>
+          <div class="card-footer">
+            <p class="published-label">
+              Published:
+              <time datetime="2025-06-05" class="date">June 5, 2025</time>
+            </p>
+            <button class="btn-more">More Info</button>
+          </div>
+        </div>
+      </article>
+    </main>
   </body>
 </html>
